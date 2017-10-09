@@ -6,12 +6,12 @@ function numbers(array_numbers) {
     var max_number;
     var sum_numbers = null;
     for (var i = 0; i < array_numbers.length; i++) {
-        if (typeof  array_numbers[i] === 'number' && !isNaN(array_numbers[i])) {
+        if (typeof array_numbers[i] == 'number' && !isNaN(array_numbers[i])) {
             sum_numbers += array_numbers[i];
-            if (array_numbers[i] < min_number || min_number === undefined) {
+            if (array_numbers[i] < min_number || typeof min_number == 'undefined') {
                 min_number = array_numbers[i];
             }
-            if (array_numbers[i] > max_number || max_number === undefined) {
+            if (array_numbers[i] > max_number || typeof max_number == 'undefined') {
                 max_number = array_numbers[i];
             }
         }
